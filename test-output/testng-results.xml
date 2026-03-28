@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-03-28T10:22:20 IST" name="Default suite" finished-at="2026-03-28T10:23:03 IST" duration-ms="43441">
+    <groups>
+    </groups>
+    <test started-at="2026-03-28T10:22:20 IST" name="Default test" finished-at="2026-03-28T10:23:03 IST" duration-ms="43441">
+      <class name="testcases.LoginTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.LoginTest@2f4948e4]" started-at="2026-03-28T10:22:20 IST" name="setUp" finished-at="2026-03-28T10:22:32 IST" duration-ms="11837" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="objint()[pri:0, instance:testcases.LoginTest@2f4948e4]" started-at="2026-03-28T10:22:32 IST" name="objint" finished-at="2026-03-28T10:22:32 IST" duration-ms="43" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- objint -->
+        <test-method signature="tc001_cstmr()[pri:0, instance:testcases.LoginTest@2f4948e4]" started-at="2026-03-28T10:22:32 IST" name="tc001_cstmr" finished-at="2026-03-28T10:22:48 IST" duration-ms="16713" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc001_cstmr -->
+        <test-method signature="tc002_trf()[pri:0, instance:testcases.LoginTest@2f4948e4]" started-at="2026-03-28T10:22:48 IST" name="tc002_trf" finished-at="2026-03-28T10:22:55 IST" duration-ms="6896" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc002_trf -->
+        <test-method signature="tc003_trfpln()[pri:0, instance:testcases.LoginTest@2f4948e4]" started-at="2026-03-28T10:22:55 IST" name="tc003_trfpln" finished-at="2026-03-28T10:23:00 IST" duration-ms="4547" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc003_trfpln -->
+        <test-method signature="tc004_pay()[pri:0, instance:testcases.LoginTest@2f4948e4]" started-at="2026-03-28T10:23:00 IST" name="tc004_pay" finished-at="2026-03-28T10:23:03 IST" duration-ms="3010" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc004_pay -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:testcases.LoginTest@2f4948e4]" started-at="2026-03-28T10:23:03 IST" name="teardown" finished-at="2026-03-28T10:23:03 IST" duration-ms="323" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- testcases.LoginTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
