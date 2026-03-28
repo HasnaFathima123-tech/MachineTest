@@ -27,14 +27,14 @@ public class LoginTest extends TestBase {
 		}
 		@Test
 		public void tc001_cstmr() throws InterruptedException {
-			hbj.login("Hasna", "Fathima","hasna@gmail.com", "House 12 Street Kochi Kerala 682001", "0123456789");
+			hbj.addcustomer("Hasna", "Fathima","hasna@gmail.com", "House 12 Street Kochi Kerala 682001", "0123456789");
 			hbj.subtbtn();
 			hbj.home();
 
 		}
 		@Test
 		public void tc002_trf() throws InterruptedException {
-			tbj.clk("499", "500", "100", "100 ", "1", "5", "2");;
+			tbj.addtariff("499", "500", "100", "100 ", "1", "5", "2");;
 			tbj.tariffbtn();
 
 		}
@@ -48,7 +48,7 @@ public class LoginTest extends TestBase {
 
 		@Test
 		public void tc004_pay() throws InterruptedException {
-			bbj.clk("235964");
+			bbj.bill("235964");
 			bbj.paybill();
 
 		}

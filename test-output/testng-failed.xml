@@ -6,9 +6,9 @@
       <class name="testcases.LoginTest">
         <methods>
           <include name="objint"/>
-          <include name="tc003_trfpln"/>
           <include name="setUp"/>
           <include name="teardown"/>
+          <include name="tc004_pay"/>
         </methods>
       </class> <!-- testcases.LoginTest -->
     </classes>

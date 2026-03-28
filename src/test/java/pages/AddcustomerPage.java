@@ -9,6 +9,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 public class AddcustomerPage {
 
@@ -19,13 +20,11 @@ public AddcustomerPage(WebDriver driver) {
 	wait=new WebDriverWait(driver,Duration.ofSeconds(60));
 	
 }
-public void login(String frstname,String lstname,String email,String txtarea,String number) throws InterruptedException {
-//	WebElement menubtn=wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"header\"]/nav")));
-//	menubtn.click();
+public void addcustomer(String frstname,String lstname,String email,String txtarea,String number) throws InterruptedException {
+
 	WebElement addcustmr=wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Add Customer")));
 	addcustmr.click();
-//	WebElement clkdone=wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id='done']")));
-//	clkdone.click();
+
 	
 	WebElement fname=driver.findElement(By.xpath("//input[@id='fname']"));
 	fname.sendKeys(frstname);
@@ -44,9 +43,11 @@ public void subtbtn() {
 	
 	WebElement btn=driver.findElement(By.xpath("//input[@name='submit']"));
 	btn.click();
-//	WebElement homectm=wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Home")));
-//	homectm.click();
-}
+	WebElement successMsg = wait.until(ExpectedConditions.visibilityOfElementLocated( By.xpath("//*[@id=\"main\"]/div/div/table/tbody/tr[2]/td[1]")));
+    Assert.assertTrue(successMsg.isDisplayed(), "Customer ID not generated!");
+		}
+
+
 public void home() {
 	WebElement homectm=wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@class='button']")));
 	homectm.click();

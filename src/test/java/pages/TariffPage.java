@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 public class TariffPage {
 	WebDriver driver;
@@ -15,9 +16,8 @@ public class TariffPage {
 		this.driver=driver;
 		wait=new WebDriverWait(driver,Duration.ofSeconds(60));
 }
-	public void clk(String rental,String localmin,String interlmnt,String smspck,String lclchrg,String intrchrg,String schrg) throws InterruptedException {
-//		WebElement menubtn=wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"header\"]/nav")));
-//		menubtn.click();
+	public void addtariff(String rental,String localmin,String interlmnt,String smspck,String lclchrg,String intrchrg,String schrg) throws InterruptedException {
+
 		WebElement addtariff=wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Add Tariff Plan")));
 		addtariff.click();
 	    WebElement rntl=driver.findElement(By.xpath("//input[@id='rental1']"));
@@ -40,6 +40,8 @@ public class TariffPage {
 		
 		WebElement btn=driver.findElement(By.xpath("//input[@name='submit']"));
 		btn.click();
+		WebElement successMsg = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h2[contains(text(),'Congratulation')]")));
+        Assert.assertTrue(successMsg.isDisplayed(), "Tariff Plan not added!");
 		WebElement hometrf=wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@class='button']")));
 		hometrf.click();
 }

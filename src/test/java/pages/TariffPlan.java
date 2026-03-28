@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 public class TariffPlan {
 	WebDriver driver;
@@ -27,7 +28,10 @@ public class TariffPlan {
 		
 		WebElement planbtn=driver.findElement(By.xpath("//input[@name='submit']"));
 		planbtn.click();
-}
+	    WebElement successElement = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h3")));  // change based on page
+	    Assert.assertTrue(successElement.isDisplayed(), "Action failed!");
+			}
+
 	public void approveplan() {
 		WebElement  apprvbtn=driver.findElement(By.xpath("//input[@value='Add Tariff Plan to Customer']"));
 		apprvbtn.click();
